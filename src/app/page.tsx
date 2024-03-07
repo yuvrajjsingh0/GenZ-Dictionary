@@ -34,7 +34,7 @@ export default function Home() {
       <div className="flex justify-center my-20">
         <div className={`grid grid-cols-1 sm:grid-flow-col gap-10 sm:auto-cols-max mx-0`}>
           <div className="p-4">
-            <Search searchAction={processSearch} resultSection='#result' />
+            <Search searchAction={processSearch} />
           </div>
           {slangQuery.length != 0 && result && resError == '' && (
             <div className="p-4" id="result">

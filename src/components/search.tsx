@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import genz from '../assets/genz.jpg'
-import Link from 'next/link';
+import genz from '../assets/genz.webp'
 
-export const Search = ({searchAction, resultSection}:any) => {
+export const Search = ({searchAction}:any) => {
 
     const [searchStr, setSearchStr] = useState('');
 
