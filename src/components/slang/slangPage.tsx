@@ -1,5 +1,7 @@
 'use client'
 import { Search } from '@/components/search'
+import { analytics } from '@/util/firebase';
+import { logEvent } from 'firebase/analytics';
 import { useRouter } from 'next/navigation';
 import React, { useEffect } from 'react'
 
@@ -8,6 +10,11 @@ export default function SlangPage(props: any) {
     const router = useRouter();
 
     useEffect(() => {
+        analytics && logEvent(analytics, 'page_view', {
+            page_title: props.params.slang,
+            page_path: "/slang/" + props.params.slang,
+        });
+
         setTimeout(() => document.getElementById('result')?.scrollIntoView(), 200);
     }, []);
 

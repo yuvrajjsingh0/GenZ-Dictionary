@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getAnalytics, isSupported } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAyJeCYqI6QFp5BMvoUIRkIy_sx0XCnNj4",
@@ -12,6 +12,8 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-//const analytics = getAnalytics(app);
 
-export { app };
+const analytics = await isSupported() ? getAnalytics(app) : null
+
+
+export { app, analytics };
