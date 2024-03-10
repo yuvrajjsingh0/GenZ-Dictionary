@@ -4,7 +4,7 @@ import { FaDiscord } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export const Header = () => {
-    const discordMessages = Math.ceil(Math.random()*10);
+    //const discordMessages = Math.ceil(Math.random()*10);
     return (
         <div className="navbar bg-base-100 sticky top-0 z-50">
             <div className="flex-1">
@@ -15,7 +15,7 @@ export const Header = () => {
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle mx-4">
                         <div className="indicator">
                             <FaDiscord size={"2em"}/>
-                            <span className="badge badge-sm indicator-item">{discordMessages}</span>
+                            <span className="badge badge-sm indicator-item">8+</span>
                         </div>
                     </div>
                 </Link>
