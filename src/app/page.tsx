@@ -1,21 +1,11 @@
 "use client"
 import { Header } from "@/components/header";
 import { Search } from "@/components/search";
-import { analytics } from "@/util/firebase";
-import { logEvent } from "firebase/analytics";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 export default function Home() {
 
   const router = useRouter();
-
-  useEffect(() => {
-    analytics && logEvent(analytics, 'page_view', {
-      page_title: "Home GenZ.social",
-      page_path: "/",
-    });
-  }, []);
   
   return (
     <>

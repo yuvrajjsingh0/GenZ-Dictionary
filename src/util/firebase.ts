@@ -13,7 +13,4 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-const analytics = await isSupported() ? getAnalytics(app) : null
-
-
-export { app, analytics };
+export { app };
