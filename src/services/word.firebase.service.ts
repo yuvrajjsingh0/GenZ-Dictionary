@@ -11,10 +11,14 @@ export async function getWord(word: string): Promise<Word> {
         try {
             const result = await getDoc(docRef);
 
-            const word: Word = result.data() as Word;
-            word.id = result.id;
+            if(!result.exists()){
+                reject("Doesn't exist");
+            }else{
+                const word: Word = result.data() as Word;
+                word.id = result.id;
+                resolve(word);
+            }
 
-            resolve(word);
         } catch (e) {
             reject(e);
         }
