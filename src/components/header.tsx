@@ -8,7 +8,7 @@ export const Header = () => {
     return (
         <div className="navbar bg-base-100 sticky top-0 z-50">
             <div className="flex-1">
-                <a className="btn btn-ghost text-xl">GenZ Dictionary</a>
+                <Link href="/" className="btn btn-ghost text-xl">GenZ Dictionary</Link>
             </div>
             <div className="flex-none">
                 <Link href={"https://discord.gg/E7vZarD8j8"} target='_blank'>
